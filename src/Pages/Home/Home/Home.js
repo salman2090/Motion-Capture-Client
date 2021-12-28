@@ -1,9 +1,14 @@
 import React from 'react';
+import Banner from '../Banner/Banner';
+import Cameras from '../Cameras/Cameras';
+import Lenses from '../Lenses/Lenses';
 
 const Home = () => {
     return (
         <div>
-            <h1>Home</h1>
+            <Banner></Banner>
+            <Cameras></Cameras>
+            <Lenses></Lenses>
         </div>
     );
 };

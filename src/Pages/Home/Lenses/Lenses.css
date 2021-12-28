@@ -1,0 +1,30 @@
+.lens-bg{
+    background-image: url(../../../Images/Lens/lensImage.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+}
+.lenses-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+.lens-img{
+    width: 500px;
+}
+
+/* Make it Responsive*/
+
+@media only screen and (max-width:688px) {
+    .lenses-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .lenses-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,13 +1,14 @@
 import React from 'react';
+import './Navigation.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material';
+import logo from '../../../Images/Logo/logo.png';
 
 const Navigation = () => {
     const darkTheme = createTheme({
@@ -31,12 +32,12 @@ const Navigation = () => {
                aria-label="menu"
                sx={{ mr: 2 }}
              >
-               <MenuIcon />
+               <img src={logo} alt="" />
              </IconButton>
-             <Typography  variant="h6" component="div" sx={{ flexGrow: 1 }}>
-               <p className="title-name">Motion Capture</p>
+             <Typography  variant="h6" component="div">
+               <p>Motion Capture</p>
              </Typography>
-             <Button color="inherit">Login</Button>
+             <Button sx={{alignItems:'flex-end'}} className='login-btn' color="inherit">Login</Button>
            </Toolbar>
          </AppBar>
          </ThemeProvider>
