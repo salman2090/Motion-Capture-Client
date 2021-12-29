@@ -9,7 +9,7 @@ const MyOrders = () => {
     const {user} = useAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${email}`)
+        fetch(`https://morning-island-32552.herokuapp.com/myOrder/${email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     },[control])
@@ -17,7 +17,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const proceed=window.confirm('Are you sure, you want to delete?');
         if(proceed) {
-            fetch(`http://localhost:5000/delete/${id}`,{
+            fetch(`https://morning-island-32552.herokuapp.com/delete/${id}`,{
                 method:"DELETE",
             })
                 .then(res => res.json())
@@ -31,7 +31,7 @@ const MyOrders = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`,{
+        fetch(`https://morning-island-32552.herokuapp.com/orders?email=${user.email}`,{
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }

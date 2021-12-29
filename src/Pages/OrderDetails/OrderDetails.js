@@ -11,7 +11,7 @@ const OrderDetails = () => {
     const email = sessionStorage.getItem("email");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleProduct/${cameraId}`)
+        fetch(`https://morning-island-32552.herokuapp.com/singleProduct/${cameraId}`)
             .then(res => res.json())
             .then(data => setCamera(data));
     }, [cameraId]);
@@ -23,7 +23,7 @@ const OrderDetails = () => {
         data.email = email;
         data.status = "pending";
 
-        fetch("http://localhost:5000/addOrder", {
+        fetch("https://morning-island-32552.herokuapp.com/addOrder", {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(data)

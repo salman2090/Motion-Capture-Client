@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 const AddCamera = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch("http://localhost:5000/addCamera", {
+        fetch("https://morning-island-32552.herokuapp.com/addCamera", {
             method: "POST",
             headers: {"content-type" : "application/json"},
             body: JSON.stringify(data),

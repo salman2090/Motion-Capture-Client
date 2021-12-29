@@ -41,7 +41,7 @@ const ManageOrders = () => {
     console.log(status);
 
     const handleUpdate = (id) => {
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://morning-island-32552.herokuapp.com/updateStatus/${id}`, {
             method: "PUT",
             headers: {"content-type": "application/json"},
             body: JSON.stringify({status})
@@ -49,7 +49,7 @@ const ManageOrders = () => {
         console.log(id)
     }
     useEffect(() => {
-        fetch("http://localhost:5000/delete/manageOrder")
+        fetch("https://morning-island-32552.herokuapp.com/delete/manageOrder")
             .then(res => res.json())
             .then(data => setOrders(data))
     } ,[]);

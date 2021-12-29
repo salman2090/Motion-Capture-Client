@@ -36,14 +36,14 @@ const ManageCameras = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/cameras")
+        fetch("https://morning-island-32552.herokuapp.com/cameras")
         .then(res => res.json())
         .then(data => setCameras(data))
     },[control]);
     const handleDelete = (id) => {
         const proceed=window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/delete/${id}`,{
+            fetch(`https://morning-island-32552.herokuapp.com/delete/${id}`,{
             method:"DELETE",
         })
             .then(res => res.json())
