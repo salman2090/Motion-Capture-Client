@@ -1,0 +1,28 @@
+.footer{
+    background-color: cadetblue;
+    padding: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    grid-gap: 20px;
+    margin-top: 20px;  
+}
+
+/* Responsive */
+
+@media only screen and (max-width:688px) {
+    .footer-container{
+        grid-template-columns: repeat(1,1fr);
+    }   
+}
+
+@media only screen and (min-width:689px) and(max-width:991px) {
+    .footer-container{
+        grid-template-columns: repeat(2,1fr);
+    }   
+}
+
+

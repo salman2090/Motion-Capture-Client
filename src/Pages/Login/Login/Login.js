@@ -1,6 +1,6 @@
-import { Button } from '@mui/material';
 import React from 'react';
 import useAuth from '../../../hooks/useAuth';
+import { Button } from '@mui/material';
 
 const Login = () => {
     const {signInUsingGoogle} = useAuth();
@@ -8,7 +8,7 @@ const Login = () => {
         <div>
             <h2 sx={{my:5}}>Please Login!</h2>
             <h5>Click on the beneath button for Google Sign In</h5>
-            <Button sx={{mt:3, mb:5}} onClick={signInUsingGoogle}>Google Sign In</Button>
+            <Button sx={{mt:3, mb:5}} onClick={signInUsingGoogle} variant="contained">Google Sign In</Button>
             <button onClick={signInUsingGoogle} className="btn btn-warning login-form mt-3 mb-5">Google Sign In</button>
         </div>
     );

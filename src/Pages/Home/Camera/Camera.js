@@ -1,4 +1,4 @@
-import {Button, Card, CardContent, CardMedia, Fab, Typography } from '@mui/material';
+import {Card, CardContent, CardMedia, Fab, Typography } from '@mui/material';
 import './Camera.css';
 import React from 'react';
 import { Link } from 'react-router-dom';

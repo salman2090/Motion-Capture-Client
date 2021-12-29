@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDX0GnKWiHJhgBWt_fou4dEHjnpwKt2CSE",
-    authDomain: "motion-capture-cb80e.firebaseapp.com",
-    projectId: "motion-capture-cb80e",
-    storageBucket: "motion-capture-cb80e.appspot.com",
-    messagingSenderId: "890058359784",
-    appId: "1:890058359784:web:276f2ad52fc39d05d85a5d"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
 };
 
 export default firebaseConfig;
